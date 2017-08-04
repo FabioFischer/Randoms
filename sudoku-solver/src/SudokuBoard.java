@@ -3,14 +3,14 @@
  */
 public class SudokuBoard {
     public static final int EMPTY_CELL_MARKER = 0;
+    public static final int MATRIX_SIZE = 9;
+    public static final int MATRIX_SEGMENT_SIZE = 3;
 
     private int[][] matrix;
-    private int size;
 
     public SudokuBoard(){}
 
     public SudokuBoard(int[][] input){
-        this.setSize(input.length);
         this.setMatrix(input);
     }
 
@@ -20,13 +20,5 @@ public class SudokuBoard {
 
     public void setMatrix(int[][] matrix) {
         this.matrix = matrix;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public void setSize(int size) {
-        this.size = size;
     }
 }
